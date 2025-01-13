@@ -160,18 +160,27 @@ body {
     width: 650px;
     font-size: 19px;
 }
-.cart{
+.cart {
     color: white;
     display: flex;
-}
-.cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
-    position: absolute;
-    font-size: 29px;
-
-}
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    position: relative; /* Enable positioning for the quantity */
+  }
+  
+  .cart h1 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .cart_quantity_count {
+    position: absolute; /* Position the quantity on top of the cart icon */
+    top: 50%; /* Position vertically at the center */
+    transform: translateY(-50%); /* Offset to adjust for element height */
+    font-size: 18px; /* Adjust font size as needed */
+    color: white; /* Ensure white color for visibility */
+  }
 .plantname_heading{
    display: flex;
    align-items: center;
@@ -210,6 +219,20 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+  .product-added {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
   
   .product-button:hover {
     background-color: #45a049;
