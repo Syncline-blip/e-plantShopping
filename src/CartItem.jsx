@@ -64,7 +64,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleContinueShopping = (onContinueShopping) => {
     if (onContinueShopping) {
-      onContinueShopping(); // Trigger parent-provided function
+      onContinueShopping();
     } else {
       console.log('Continue shopping clicked');
     }
@@ -72,10 +72,10 @@ const CartItem = ({ onContinueShopping }) => {
   
   const handleCheckout = () => {
     // console.log("Checkout clicked:", isCheckoutClicked);
-    setIsCheckoutClicked(true); // Update state to show "Coming Soon"
+    setIsCheckoutClicked(true); 
     setTimeout(() => {
-      setIsCheckoutClicked(false); // Reset the state to hide the message
-    }, 10000); // 10000 milliseconds = 10 seconds
+      setIsCheckoutClicked(false);
+    }, 10000); 
   };
 
   return (
@@ -120,11 +120,11 @@ const CartItem = ({ onContinueShopping }) => {
         <br />
         <button
           className="get-started-button1"
-          onClick={handleCheckout} // Directly link the handler here
+          onClick={handleCheckout} 
         >
           Checkout
         </button>
-         {/* Show the Coming Soon message when the button is clicked */}
+
         {isCheckoutClicked && (
           <div style={{ color: 'red', marginTop: '20px' }}>
             Coming Soon...
